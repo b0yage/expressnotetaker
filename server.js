@@ -11,8 +11,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-//routes
 
+//routes
 app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "public/index.html"));
 });
@@ -48,6 +48,7 @@ app.post("/api/notes", function(req, res) {
     });
 });
 
+
 //deletes the note object with requested id from the db.json file, returns deleted notes.
 app.delete("/api/notes/:id", function(req, res) {
     const deleteId = req.params.id;
@@ -68,14 +69,11 @@ app.delete("/api/notes/:id", function(req, res) {
         } else {
             res.json(false);
         }
-        
-
-    });
-    
+    }); 
 });
 
-//starts the server
 
+//starts the server
 app.listen(5500, function() {
     console.log("App listening on PORT " + 5500);
 });
