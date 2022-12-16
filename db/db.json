@@ -1,1 +1,7 @@
-[]
+[
+  {
+    "id": 1,
+    "title": "Test title",
+    "text": "This is a test note to make sure that the application is up and running."
+  }
+]
