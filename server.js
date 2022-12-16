@@ -22,13 +22,13 @@ app.get("/notes", function(req, res) {
 });
 
 app.get("/api/notes", function(req, res) {
-    res.sendFile(path.join(__dirname, "db/db.json"));
+    res.sendFile(path.join(__dirname, "db.json"));
 });
 
 
 //takes a json input with keys "title" and "text" and adds a note object to db.json file
 app.post("/api/notes", function(req, res) {
-    fs.readFile(path.join(__dirname, "db/db.json"), "utf8", function(error, response) {
+    fs.readFile(path.join(__dirname, "db.json"), "utf8", function(error, response) {
         if (error) {
             console.log(error);
         }
