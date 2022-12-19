@@ -74,6 +74,6 @@ app.delete("/api/notes/:id", function(req, res) {
 
 
 //starts the server, merge
-app.listen(PORT, function() {
+app.listen(3001, function() {
     console.log("App listening on PORT " + 3001);
 });
